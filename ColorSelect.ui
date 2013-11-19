@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>colorclass</class>
- <widget class="QWidget" name="colorclass">
+ <class>ColorSelect</class>
+ <widget class="QWidget" name="ColorSelect">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Select a Color</string>
+   <string>ColorSelect</string>
   </property>
   <widget class="QLabel" name="Red">
    <property name="geometry">
@@ -207,7 +207,7 @@
     </size>
    </property>
    <property name="mouseTracking">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="autoFillBackground">
     <bool>true</bool>
@@ -227,15 +227,6 @@
      <width>64</width>
      <height>64</height>
     </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="mouseTracking">
-    <bool>true</bool>
    </property>
    <property name="autoFillBackground">
     <bool>true</bool>
@@ -320,10 +311,10 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>510</x>
-     <y>330</y>
-     <width>141</width>
-     <height>51</height>
+     <x>560</x>
+     <y>350</y>
+     <width>101</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -333,262 +324,6 @@
    </property>
    <property name="text">
     <string>OK</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseMagenta" native="true">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>160</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkGreen" native="true">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>240</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkRed" native="true">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>320</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkBlue" native="true">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>160</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkCyan" native="true">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>240</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkMagenta" native="true">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>320</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkYellow" native="true">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>160</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseOrange" native="true">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>240</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseDarkGray" native="true">
-   <property name="geometry">
-    <rect>
-     <x>350</x>
-     <y>320</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseGray" native="true">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>160</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseLightGray" native="true">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>240</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QWidget" name="chooseCyan" native="true">
-   <property name="geometry">
-    <rect>
-     <x>430</x>
-     <y>320</y>
-     <width>64</width>
-     <height>64</height>
-    </rect>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="test">
-   <property name="geometry">
-    <rect>
-     <x>540</x>
-     <y>260</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="autoFillBackground">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
    </property>
   </widget>
  </widget>
@@ -694,7 +429,7 @@
   <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>colorclass</receiver>
+   <receiver>ColorSelect</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
