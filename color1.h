@@ -1,21 +1,19 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-
+#ifndef COLOR1_H
+#define COLOR1_H
 #include <QWidget>
 #include <QColor>
 
 namespace Ui {
-class ColorSelect;
+class colorclass;
 }
 
-class ColorSelect : public QWidget
+class colorclass : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(QColor color READ color NOTIFY colorChanged)
 public:
-    explicit ColorSelect(QWidget *parent = 0);
-    ~ColorSelect();
-
+    explicit colorclass(QWidget *parent = 0);
+    ~colorclass();
     QColor color() const
     {
        return m_color;
@@ -31,4 +29,4 @@ private:
     QColor m_color;
 };
 
-#endif // MAINWINDOW_H
+#endif // COLOR1_H

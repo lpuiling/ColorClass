@@ -1,10 +1,10 @@
-#include "mainwindow.h"
+#include "colorclass.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    ColorSelect w;
+    colorclass w;
     w.show();
 
     return a.exec();
