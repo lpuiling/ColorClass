@@ -240,10 +240,10 @@ void colorclass::mousePressEvent(QMouseEvent *e)
         pencil.setColor(myPenColor);
         brush.setColor(myPenColor);
     }
-    else if(m_mouseClick && m_lastPoint.x()>190 && m_lastPoint.x()<(190+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    else if(m_mouseClick && m_lastPoint.x()>270 && m_lastPoint.x()<(270+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
     {
         QMessageBox msgBox;
-        msgBox.information(this, "color","magenta");
+        msgBox.information(this, "color","darkMagenta");
         myPenColor=QColor(255,0,255);
         pencil.setColor(myPenColor);
         brush.setColor(myPenColor);
