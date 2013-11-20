@@ -21,18 +21,9 @@ colorclass::colorclass(QWidget *parent) :
     connect(ui->blueslider,SIGNAL(valueChanged(int)),SLOT(onColorChanged()));
     onColorChanged();
 
-  //  ui->setupUi(this);
-  // connect(ui->chooseRed,SIGNAL(hasMouseTracking()),SLOT(mousePressEvent(QMouseEvent *e)));
-  // m_mouseClick= mousePressEvent(QMouseEvent *e);
-     //connect(ui->chooseRed->hasMouseTracking());
-    //OK=new QPushButton("OK");
-
-   // ui->OK(button)
      m_mouseClick = false;
      myPenColor = QColor(0,255,0,255);// set default color
      pencil.setColor(myPenColor);
-     //myMouse.MouseButtonPress=m_mouseClick;
-
 
 }
 
@@ -49,9 +40,8 @@ void colorclass::onColorChanged()
     ui->displaywidget->setPalette(pal);
     emit colorChanged(m_color);
     QPalette p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18;
-    //if(ui->displaywidget->c)
-    //color0 , color1 , black , white , darkGray , gray , lightGray , red , green , blue ,
-    //cyan , magenta , yellow , darkRed , darkGreen , darkBlue , darkCyan , darkMagenta , darkYellow , transparent 19
+    //black , white , darkGray , gray , lightGray , red , green , blue ,
+    //cyan , magenta , yellow , darkRed , darkGreen , darkBlue , darkCyan , darkMagenta , darkYellow
 
     p1=ui->chooseRed->palette();
     p1.setColor(QPalette::Background,Qt::red);
@@ -121,11 +111,6 @@ void colorclass::onColorChanged()
     p17.setColor(QPalette::Background,Qt::darkGray);
     ui->chooseDarkGray->setPalette(p17);
 
-  /*  QPalette p19=ui->test->palette();
-    p19.setColor(QPalette::Background,Qt::darkCyan);
-    ui->test->setPalette(p19);*/
-
-    //QColor orange;
     p18=ui->chooseOrange->palette();
     p18.setColor(QPalette::Background,QColor::fromRgb(255,140,0));   //Orange
     ui->chooseOrange->setPalette(p18);
@@ -135,12 +120,6 @@ void colorclass::onColorChanged()
 void colorclass::mousePressEvent(QMouseEvent *e)
 {
     m_lastPoint = e->pos();
-   // bool xRange=0;
-   // bool yRange=0;
-   // if( m_lastPoint.x()>30 && m_lastPoint.x()<94 )
-        //xRange=1;
-   // if( m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )
-    //    yRange=1;
     m_mouseClick = true;
     update();
 
@@ -295,17 +274,6 @@ void colorclass::mousePressEvent(QMouseEvent *e)
         myPenColor=QColor(0,255,255);
         pencil.setColor(myPenColor);
         brush.setColor(myPenColor);
-    }
-}
-
-void colorclass::mouseReleaseEvent ( QMouseEvent * e )
-{
-    // m_mouseClick = false;
-    // check if cursor not moved since click beginning
-   if ((m_mouseClick) && (e->pos() == m_lastPoint))
-    {
-           // do something: for example emit Click signal
-       emit mouseClickEvent();
     }
 }
 

@@ -24,19 +24,13 @@ public:
     {
        return m_color;
     }
-    //QPushButton *OK;
-   // QMouseEvent myMouse;
+
 //protected:
-    void mouseReleaseEvent ( QMouseEvent * e );
     void mousePressEvent ( QMouseEvent * e );
 signals:
     void colorChanged(QColor arg);
-    void mouseClickEvent();
-
 private slots:
     void onColorChanged();
-
-   //void on_OK_clicked();
 
     void on_ChooseThis_clicked();
 
