@@ -575,20 +575,25 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="test">
+  <widget class="QPushButton" name="ChooseThis">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>260</y>
-     <width>75</width>
-     <height>23</height>
+     <x>530</x>
+     <y>130</y>
+     <width>111</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="autoFillBackground">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>Choose This</string>
    </property>
   </widget>
  </widget>

@@ -38,6 +38,8 @@ private slots:
 
    //void on_OK_clicked();
 
+    void on_ChooseThis_clicked();
+
 private:
     Ui::colorclass *ui;
     QColor m_color;
@@ -45,6 +47,7 @@ private:
     QPoint m_lastPoint;
     bool m_mouseClick;
     QPen pencil;
+    QBrush brush;
     QColor myPenColor;
 
 

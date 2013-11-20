@@ -121,9 +121,9 @@ void colorclass::onColorChanged()
     p17.setColor(QPalette::Background,Qt::darkGray);
     ui->chooseDarkGray->setPalette(p17);
 
-    QPalette p19=ui->test->palette();
+  /*  QPalette p19=ui->test->palette();
     p19.setColor(QPalette::Background,Qt::darkCyan);
-    ui->test->setPalette(p19);
+    ui->test->setPalette(p19);*/
 
     //QColor orange;
     p18=ui->chooseOrange->palette();
@@ -143,22 +143,159 @@ void colorclass::mousePressEvent(QMouseEvent *e)
     //    yRange=1;
     m_mouseClick = true;
     update();
-    if(m_mouseClick && m_lastPoint.x()>30 && m_lastPoint.x()<94 && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+
+    if((m_mouseClick && m_lastPoint.x()>530 && m_lastPoint.x()<(530+111) && m_lastPoint.y()>20 && m_lastPoint.y()<(20+101)) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
     {
         QMessageBox msgBox;
-        msgBox.information(this, "color","red");
-        myPenColor = QColor(255,0,0);
+        msgBox.information(this, "color","widgetDsiplay");
+        myPenColor = QColor(ui->redslider->value(),ui->greenslider->value(),ui->blueslider->value());
         pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
     }
-    else if(m_mouseClick && m_lastPoint.x()>30 && m_lastPoint.x()<94 && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    else if(m_mouseClick && m_lastPoint.x()>30 && m_lastPoint.x()<(30+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
     {
         QMessageBox msgBox;
         msgBox.information(this, "color","blue");
         myPenColor=QColor(0,0,255);
         pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
     }
-    //pencil.color(255);
-
+    else if(m_mouseClick && m_lastPoint.x()>30 && m_lastPoint.x()<(30+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","red");
+        myPenColor = QColor(255,0,0);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>30 && m_lastPoint.x()<(30+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","yellow");
+        myPenColor=QColor(0,0,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>110 && m_lastPoint.x()<(110+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","green");
+        myPenColor=QColor(0,0,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>110 && m_lastPoint.x()<(110+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","white");
+        myPenColor=QColor(255,255,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>110 && m_lastPoint.x()<(110+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","black");
+        myPenColor=QColor(0,0,0);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>190 && m_lastPoint.x()<(190+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","magenta");
+        myPenColor=QColor(255,0,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>190 && m_lastPoint.x()<(190+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkGreen");
+        myPenColor=QColor(0,100,0);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>190 && m_lastPoint.x()<(190+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkRed");
+        myPenColor=QColor(139,0,0);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>270 && m_lastPoint.x()<(270+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkBlue");
+        myPenColor=QColor(0,0,139);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>270 && m_lastPoint.x()<(270+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkCyan");
+        myPenColor=QColor(0,139,139);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>190 && m_lastPoint.x()<(190+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","magenta");
+        myPenColor=QColor(255,0,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>350 && m_lastPoint.x()<(350+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkYellow");
+        myPenColor=QColor(139,0,139);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>350 && m_lastPoint.x()<(350+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","orange");
+        myPenColor=QColor(255,140,0);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>350 && m_lastPoint.x()<(350+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","darkGray");
+        myPenColor=QColor(169,169,169);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>430 && m_lastPoint.x()<(430+64) && m_lastPoint.y()>160 && m_lastPoint.y()<(160+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","gray");
+        myPenColor=QColor(128,128,128);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>430 && m_lastPoint.x()<(430+64) && m_lastPoint.y()>240 && m_lastPoint.y()<(240+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","lightGray");
+        myPenColor=QColor(211,211,211);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
+    else if(m_mouseClick && m_lastPoint.x()>430 && m_lastPoint.x()<(430+64) && m_lastPoint.y()>320 && m_lastPoint.y()<(320+64) )// && m_lastPoint.x()<= cRED.x()+64 && )//ui->chooseRed->hasMouseTracking())
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","cyan");
+        myPenColor=QColor(0,255,255);
+        pencil.setColor(myPenColor);
+        brush.setColor(myPenColor);
+    }
 }
 
 void colorclass::mouseReleaseEvent ( QMouseEvent * e )
@@ -169,5 +306,16 @@ void colorclass::mouseReleaseEvent ( QMouseEvent * e )
     {
            // do something: for example emit Click signal
        emit mouseClickEvent();
+    }
+}
+
+void colorclass::on_ChooseThis_clicked()
+{
+    if(m_mouseClick)
+    {
+        QMessageBox msgBox;
+        msgBox.information(this, "color","chooseThis");
+        myPenColor = QColor(ui->redslider->value(),ui->greenslider->value(),ui->blueslider->value());
+        pencil.setColor(myPenColor);
     }
 }
